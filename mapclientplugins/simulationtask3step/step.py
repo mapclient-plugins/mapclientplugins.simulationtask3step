@@ -28,6 +28,7 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         # Config:
         self._config = {}
         self._config['identifier'] = ''
+	self._view = None
 
 
     def execute(self):

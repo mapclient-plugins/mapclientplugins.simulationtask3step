@@ -6,7 +6,7 @@ import json
 
 from mapclient.mountpoints.workflowstep import WorkflowStepMountPoint
 from mapclientplugins.simulationtask3step.configuredialog import ConfigureDialog
-
+from mapclientplugins.simulationtask3step.view.simulationtask3widget import SimulationTask3Widget
 
 class SimulationTask3Step(WorkflowStepMountPoint):
     '''
@@ -37,7 +37,10 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         may be connected up to a button in a widget for example.
         '''
         # Put your execute step code here before calling the '_doneExecution' method.
-        self._doneExecution()
+        if self._view is None:
+            self._view = SimulationTask3Widget()
+            self._view.registerDoneExecution(self._doneExecution)
+        self._setCurrentWidget(self._view)
 
     def setPortData(self, index, dataIn):
         '''

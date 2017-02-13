@@ -28,7 +28,7 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         # Config:
         self._config = {}
         self._config['identifier'] = ''
-	self._view = None
+        self._view = None
 
 
     def execute(self):
@@ -41,6 +41,8 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         if self._view is None:
             self._view = SimulationTask3Widget()
             self._view.registerDoneExecution(self._doneExecution)
+            
+        self._view.setSimulationRoot(self._portData0)
         self._setCurrentWidget(self._view)
 
     def setPortData(self, index, dataIn):

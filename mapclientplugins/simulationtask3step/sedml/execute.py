@@ -15,7 +15,7 @@ class ExecuteSedml():
 
     def setSimulationRoot(self, location):
         self._simulation_root = location
-        
+
     def execute(self, stepSize, tolerance):
         '''
         http://stackoverflow.com/questions/6385686/python-technique-or-simple-templating-system-for-plain-text-output

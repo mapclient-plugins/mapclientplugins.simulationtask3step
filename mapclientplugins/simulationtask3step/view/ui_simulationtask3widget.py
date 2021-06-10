@@ -1,27 +1,33 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'simulationtask3widget.ui'
-#
-# Created: Wed May 27 23:51:22 2015
-#      by: pyside-uic 0.2.15 running on PySide 1.2.2
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'simulationtask3widget.ui'
+##
+## Created by: Qt User Interface Compiler version 5.15.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from PySide import QtCore, QtGui
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
+
 
 class Ui_SimulationTask3Widget(object):
     def setupUi(self, SimulationTask3Widget):
-        SimulationTask3Widget.setObjectName("SimulationTask3Widget")
+        if not SimulationTask3Widget.objectName():
+            SimulationTask3Widget.setObjectName(u"SimulationTask3Widget")
         SimulationTask3Widget.resize(819, 567)
-        self.horizontalLayout = QtGui.QHBoxLayout(SimulationTask3Widget)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.dockWidget = QtGui.QDockWidget(SimulationTask3Widget)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
+        self.horizontalLayout = QHBoxLayout(SimulationTask3Widget)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.dockWidget = QDockWidget(SimulationTask3Widget)
+        self.dockWidget.setObjectName(u"dockWidget")
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(1)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.dockWidget.sizePolicy().hasHeightForWidth())
         self.dockWidget.setSizePolicy(sizePolicy)
-        self.dockWidget.setStyleSheet("QToolBox::tab {\n"
+        self.dockWidget.setStyleSheet(u"QToolBox::tab {\n"
 "         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
 "                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
 "                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
@@ -37,75 +43,101 @@ class Ui_SimulationTask3Widget(object):
 "    padding : 0\n"
 "}")
         self.dockWidget.setFloating(False)
-        self.dockWidget.setFeatures(QtGui.QDockWidget.NoDockWidgetFeatures)
-        self.dockWidget.setObjectName("dockWidget")
-        self.dockWidgetContents = QtGui.QWidget()
-        self.dockWidgetContents.setObjectName("dockWidgetContents")
-        self.verticalLayout = QtGui.QVBoxLayout(self.dockWidgetContents)
+        self.dockWidget.setFeatures(QDockWidget.NoDockWidgetFeatures)
+        self.dockWidgetContents = QWidget()
+        self.dockWidgetContents.setObjectName(u"dockWidgetContents")
+        self.verticalLayout = QVBoxLayout(self.dockWidgetContents)
+        self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.widget_2 = QtGui.QWidget(self.dockWidgetContents)
-        self.widget_2.setObjectName("widget_2")
-        self.horizontalLayout_5 = QtGui.QHBoxLayout(self.widget_2)
-        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.label_2 = QtGui.QLabel(self.widget_2)
-        self.label_2.setObjectName("label_2")
+        self.widget_2 = QWidget(self.dockWidgetContents)
+        self.widget_2.setObjectName(u"widget_2")
+        self.horizontalLayout_5 = QHBoxLayout(self.widget_2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.label_2 = QLabel(self.widget_2)
+        self.label_2.setObjectName(u"label_2")
+
         self.horizontalLayout_5.addWidget(self.label_2)
-        self.stepSizeEdit = QtGui.QLineEdit(self.widget_2)
-        self.stepSizeEdit.setInputMethodHints(QtCore.Qt.ImhFormattedNumbersOnly)
-        self.stepSizeEdit.setObjectName("stepSizeEdit")
+
+        self.stepSizeEdit = QLineEdit(self.widget_2)
+        self.stepSizeEdit.setObjectName(u"stepSizeEdit")
+        self.stepSizeEdit.setInputMethodHints(Qt.ImhFormattedNumbersOnly)
+
         self.horizontalLayout_5.addWidget(self.stepSizeEdit)
+
+
         self.verticalLayout.addWidget(self.widget_2)
-        self.widget = QtGui.QWidget(self.dockWidgetContents)
-        self.widget.setObjectName("widget")
-        self.horizontalLayout_3 = QtGui.QHBoxLayout(self.widget)
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.horizontalLayout_2 = QtGui.QHBoxLayout()
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label = QtGui.QLabel(self.widget)
-        self.label.setObjectName("label")
-        self.horizontalLayout_2.addWidget(self.label)
-        self.toleranceEdit = QtGui.QLineEdit(self.widget)
-        self.toleranceEdit.setInputMethodHints(QtCore.Qt.ImhFormattedNumbersOnly)
-        self.toleranceEdit.setObjectName("toleranceEdit")
+
+        self.widget = QWidget(self.dockWidgetContents)
+        self.widget.setObjectName(u"widget")
+        self.horizontalLayout_3 = QHBoxLayout(self.widget)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.label = QLabel(self.widget)
+        self.label.setObjectName(u"label")
+
+        self.horizontalLayout_2.addWidget(self.label, 0, Qt.AlignLeft)
+
+        self.toleranceEdit = QLineEdit(self.widget)
+        self.toleranceEdit.setObjectName(u"toleranceEdit")
+        self.toleranceEdit.setInputMethodHints(Qt.ImhFormattedNumbersOnly)
+
         self.horizontalLayout_2.addWidget(self.toleranceEdit)
+
+
         self.horizontalLayout_3.addLayout(self.horizontalLayout_2)
+
+
         self.verticalLayout.addWidget(self.widget)
-        self.simulateButton = QtGui.QPushButton(self.dockWidgetContents)
-        self.simulateButton.setObjectName("simulateButton")
+
+        self.simulateButton = QPushButton(self.dockWidgetContents)
+        self.simulateButton.setObjectName(u"simulateButton")
+
         self.verticalLayout.addWidget(self.simulateButton)
-        self.clearButton = QtGui.QPushButton(self.dockWidgetContents)
-        self.clearButton.setObjectName("clearButton")
+
+        self.clearButton = QPushButton(self.dockWidgetContents)
+        self.clearButton.setObjectName(u"clearButton")
+
         self.verticalLayout.addWidget(self.clearButton)
-        spacerItem = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem)
-        self.doneButton = QtGui.QPushButton(self.dockWidgetContents)
-        self.doneButton.setObjectName("doneButton")
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer)
+
+        self.doneButton = QPushButton(self.dockWidgetContents)
+        self.doneButton.setObjectName(u"doneButton")
+
         self.verticalLayout.addWidget(self.doneButton)
+
         self.dockWidget.setWidget(self.dockWidgetContents)
+
         self.horizontalLayout.addWidget(self.dockWidget)
-        self.plotPane = QtGui.QWidget(SimulationTask3Widget)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(3)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.plotPane.sizePolicy().hasHeightForWidth())
-        self.plotPane.setSizePolicy(sizePolicy)
-        self.plotPane.setObjectName("plotPane")
+
+        self.plotPane = QWidget(SimulationTask3Widget)
+        self.plotPane.setObjectName(u"plotPane")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy1.setHorizontalStretch(3)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.plotPane.sizePolicy().hasHeightForWidth())
+        self.plotPane.setSizePolicy(sizePolicy1)
+
         self.horizontalLayout.addWidget(self.plotPane)
 
+
         self.retranslateUi(SimulationTask3Widget)
-        QtCore.QMetaObject.connectSlotsByName(SimulationTask3Widget)
+
+        QMetaObject.connectSlotsByName(SimulationTask3Widget)
+    # setupUi
 
     def retranslateUi(self, SimulationTask3Widget):
-        SimulationTask3Widget.setWindowTitle(QtGui.QApplication.translate("SimulationTask3Widget", "Heart Transform", None, QtGui.QApplication.UnicodeUTF8))
-        self.dockWidget.setWindowTitle(QtGui.QApplication.translate("SimulationTask3Widget", "Simulation Task 3", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("SimulationTask3Widget", "h:", None, QtGui.QApplication.UnicodeUTF8))
-        self.stepSizeEdit.setText(QtGui.QApplication.translate("SimulationTask3Widget", "0.0", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("SimulationTask3Widget", "tolerance:", None, QtGui.QApplication.UnicodeUTF8))
-        self.toleranceEdit.setText(QtGui.QApplication.translate("SimulationTask3Widget", "1.0e-7", None, QtGui.QApplication.UnicodeUTF8))
-        self.simulateButton.setText(QtGui.QApplication.translate("SimulationTask3Widget", "Simulate", None, QtGui.QApplication.UnicodeUTF8))
-        self.clearButton.setText(QtGui.QApplication.translate("SimulationTask3Widget", "Clear graph", None, QtGui.QApplication.UnicodeUTF8))
-        self.doneButton.setText(QtGui.QApplication.translate("SimulationTask3Widget", "Done", None, QtGui.QApplication.UnicodeUTF8))
+        SimulationTask3Widget.setWindowTitle(QCoreApplication.translate("SimulationTask3Widget", u"Heart Transform", None))
+        self.dockWidget.setWindowTitle(QCoreApplication.translate("SimulationTask3Widget", u"Simulation Task 3", None))
+        self.label_2.setText(QCoreApplication.translate("SimulationTask3Widget", u"h:", None))
+        self.stepSizeEdit.setText(QCoreApplication.translate("SimulationTask3Widget", u"0.0", None))
+        self.label.setText(QCoreApplication.translate("SimulationTask3Widget", u"tolerance:", None))
+        self.toleranceEdit.setText(QCoreApplication.translate("SimulationTask3Widget", u"1.0e-7", None))
+        self.simulateButton.setText(QCoreApplication.translate("SimulationTask3Widget", u"Simulate", None))
+        self.clearButton.setText(QCoreApplication.translate("SimulationTask3Widget", u"Clear graph", None))
+        self.doneButton.setText(QCoreApplication.translate("SimulationTask3Widget", u"Done", None))
+    # retranslateUi
 

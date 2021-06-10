@@ -3,14 +3,11 @@ Created on May 26, 2015
 
 @author: andre
 '''
-from PySide import QtGui, QtCore
-
-import numpy as np
+from PySide2 import QtCore, QtWidgets
 
 import matplotlib
 matplotlib.use('Qt4Agg')
 matplotlib.rcParams['backend.qt4']='PySide'
-import pylab
 
 from matplotlib.backends.backend_qt4agg import (
     FigureCanvasQTAgg as FigureCanvas,
@@ -22,7 +19,7 @@ from matplotlib.backend_bases import key_press_handler
 from mapclientplugins.simulationtask3step.view.ui_simulationtask3widget import Ui_SimulationTask3Widget
 from mapclientplugins.simulationtask3step.sedml.execute import ExecuteSedml
 
-class SimulationTask3Widget(QtGui.QWidget):
+class SimulationTask3Widget(QtWidgets.QWidget):
     '''
     classdocs
     '''
@@ -45,7 +42,7 @@ class SimulationTask3Widget(QtGui.QWidget):
         self.mpl_toolbar = NavigationToolbar(self.canvas, self._ui.plotPane)
         self.canvas.mpl_connect('key_press_event', self.on_key_press)
 
-        vbox = QtGui.QVBoxLayout()
+        vbox = QtWidgets.QVBoxLayout()
         vbox.addWidget(self.canvas)  # the matplotlib canvas
         vbox.addWidget(self.mpl_toolbar)
         self._ui.plotPane.setLayout(vbox)

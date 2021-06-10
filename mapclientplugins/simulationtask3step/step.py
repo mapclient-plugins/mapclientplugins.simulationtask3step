@@ -1,4 +1,3 @@
-
 '''
 MAP Client Plugin Step
 '''
@@ -8,6 +7,7 @@ from mapclient.mountpoints.workflowstep import WorkflowStepMountPoint
 from mapclientplugins.simulationtask3step.configuredialog import ConfigureDialog
 from mapclientplugins.simulationtask3step.view.simulationtask3widget import SimulationTask3Widget
 
+
 class SimulationTask3Step(WorkflowStepMountPoint):
     '''
     Skeleton step which is intended to be a helpful starting point
@@ -16,7 +16,7 @@ class SimulationTask3Step(WorkflowStepMountPoint):
 
     def __init__(self, location):
         super(SimulationTask3Step, self).__init__('Simulation Task 3', location)
-        self._configured = False # A step cannot be executed until it has been configured.
+        self._configured = False  # A step cannot be executed until it has been configured.
         self._category = 'Integration'
         # Add any other initialisation code here:
         # Ports:
@@ -24,12 +24,11 @@ class SimulationTask3Step(WorkflowStepMountPoint):
                       'http://physiomeproject.org/workflow/1.0/rdf-schema#uses',
                       'sedml'))
         # Port data:
-        self._portData0 = None # sedml
+        self._portData0 = None  # sedml
         # Config:
         self._config = {}
         self._config['identifier'] = ''
         self._view = None
-
 
     def execute(self):
         '''
@@ -41,7 +40,7 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         if self._view is None:
             self._view = SimulationTask3Widget()
             self._view.registerDoneExecution(self._doneExecution)
-            
+
         self._view.setSimulationRoot(self._portData0)
         self._setCurrentWidget(self._view)
 
@@ -51,7 +50,7 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         The index is the index of the port in the port list.  If there is only one
         uses port for this step then the index can be ignored.
         '''
-        self._portData0 = dataIn # sedml
+        self._portData0 = dataIn  # sedml
 
     def configure(self):
         '''
@@ -66,10 +65,10 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         dlg.setConfig(self._config)
         dlg.validate()
         dlg.setModal(True)
-        
+
         if dlg.exec_():
             self._config = dlg.getConfig()
-        
+
         self._configured = dlg.validate()
         self._configuredObserver()
 
@@ -92,7 +91,6 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         '''
         return json.dumps(self._config, default=lambda o: o.__dict__, sort_keys=True, indent=4)
 
-
     def deserialize(self, string):
         '''
         Add code to deserialize this step from string.  This method should
@@ -104,5 +102,3 @@ class SimulationTask3Step(WorkflowStepMountPoint):
         d.identifierOccursCount = self._identifierOccursCount
         d.setConfig(self._config)
         self._configured = d.validate()
-
-

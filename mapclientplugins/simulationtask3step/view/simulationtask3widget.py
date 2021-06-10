@@ -6,8 +6,9 @@ Created on May 26, 2015
 from PySide2 import QtCore, QtWidgets
 
 import matplotlib
-matplotlib.use('Qt4Agg')
-matplotlib.rcParams['backend.qt4']='PySide'
+# matplotlib.use('Qt4Agg')
+# matplotlib.rcParams['backend.qt4']='PySide'
+matplotlib.use('Qt5Agg')
 
 from matplotlib.backends.backend_qt4agg import (
     FigureCanvasQTAgg as FigureCanvas,

@@ -7,13 +7,8 @@ from PySide2 import QtCore, QtWidgets
 
 import matplotlib
 
-# matplotlib.use('Qt4Agg')
-# matplotlib.rcParams['backend.qt4']='PySide'
 matplotlib.use('Qt5Agg')
 
-# from matplotlib.backends.backend_qt4agg import (
-#     FigureCanvasQTAgg as FigureCanvas,
-#     NavigationToolbar2QT as NavigationToolbar)
 from matplotlib.backends.backend_qt5agg import (
     FigureCanvasQTAgg as FigureCanvas,
     NavigationToolbar2QT as NavigationToolbar)
@@ -79,12 +74,6 @@ class SimulationTask3Widget(QtWidgets.QWidget):
         results = self.sedml.execute(h, tol)
         if results == None:
             return
-        # print results
-        # print data
-        # print data.shape
-        # print data.dtype.names
-        # print data['X']
-        # self.axes.plot(data['X'], data['sinX'], label='sin(x)')
         title = "h=" + str(h) + "; tol=" + str(tol) + "; time=" + str(results['time'])
         self.axes.plot(results['data']['t'], results['data']['Vm'], label=title)
         self.axes.legend()
